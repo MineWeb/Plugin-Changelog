@@ -1,0 +1,1 @@
+{"name":"Changelog","admin_menus":{"GLOBAL__ADMIN_GENERAL":{"Changelogs":{"icon":"list","menu":{"Gérer":{"icon":"cog","route":"/admin/ChangeLog"}}}}},"navbar_routes":{"Changelogs":"/changelog"},"author":"Kenshimdev","version":"1.1.0","apiID":54,"useEvents":true,"permissions":{"available":[],"default":{"0":[],"2":[]}},"requirements":{"CMS":"^1.2.0"}}
