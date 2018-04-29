@@ -7,6 +7,6 @@
  * @since         10.03.17
  */
 
-Router::connect('/admin/ChangeLog', ['controller' => 'Changelog', 'action' => 'index', 'plugin' => 'ChangeLog', 'admin' => true]);
-Router::connect('/admin/ChangeLog/delete/:id', ['controller' => 'Changelog', 'action' => 'delete', 'plugin' => 'ChangeLog', 'admin' => true], ['pass' => ['id']], ['id' => '[0-9]+']);
+Router::connect('/admin/Changelog', ['controller' => 'Changelog', 'action' => 'index', 'plugin' => 'ChangeLog', 'admin' => true]);
+Router::connect('/admin/Changelog/delete/:id', ['controller' => 'Changelog', 'action' => 'delete', 'plugin' => 'ChangeLog', 'admin' => true], ['pass' => ['id']], ['id' => '[0-9]+']);
 Router::connect('/changelog', ['controller' => 'Changelog', 'action' => 'index', 'plugin' => 'ChangeLog']);
