@@ -14,7 +14,7 @@ class ChangelogController extends AppController{
      */
     public function index(){
         //Load configuration
-        $this->loadModel('ChangeLog.Changelogs');
+        $this->loadModel('Changelog.Changelogs');
         //Retrieves the last 35 logs
         $changelogs = $this->Changelogs->find('all', ['order' => ['created desc'], 'limit' => 35]);
 
@@ -29,7 +29,7 @@ class ChangelogController extends AppController{
             $this->layout = 'admin';
 
             //Get list of logs
-            $this->loadModel('ChangeLog.Changelogs');
+            $this->loadModel('Changelog.Changelogs');
             $changelogs = $this->Changelogs->find('all', ['order' => ['id desc']]);
 
             if ($this->request->is('post')) {
@@ -89,7 +89,7 @@ class ChangelogController extends AppController{
                 throw new MethodNotAllowedException();
             }
 
-            $this->loadModel('ChangeLog.Changelogs');
+            $this->loadModel('Changelog.Changelogs');
             if ($this->Changelogs->delete($id)){
                 $this->Session->setFlash($this->Lang->get('CL_ADMIN_DELETE'), 'default.success');
             }
