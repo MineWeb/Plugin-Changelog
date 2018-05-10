@@ -18,25 +18,25 @@
                         <div class="col-md-6">
                             <div class="container">
                                 <div class="row">
-                                    <form method="post" action="<?= $this->Html->url(["controller" => "Changelog", "action" => "index", "admin" => true]); ?>" style="margin-left: -15px;">
+                                    <form method="post" action="<?= $this->Html->url(["controller" => "Intervention", "action" => "index", "admin" => true]); ?>" style="margin-left: -15px;">
 
                                         <div class="form-group col-md-6">
                                             <label class="control-label" id="level">
                                                 <?= $Lang->get("CL_LBL_LEVEL"); ?>
                                                 (
-                                                <span class="label label-success">MISE À JOUR</span>
-                                                <span class="label label-info">INFORMATION</span>
-                                                <span class="label label-warning">ATTENTION</span>
-                                                <span class="label label-danger">IMPORTANT</span>
+                                                <span class="label label-success">PLANIFIER</span>
+                                                <span class="label label-info">TERMINÉ</span>
+                                                <span class="label label-warning">EN COURS</span>
+                                                <span class="label label-danger">ÉCHEC</span>
                                                 )
                                             </label>
                                             <div class="input-group">
                                                 <span class="input-group-addon"><span class="fa fa-exclamation-circle"></span></span>
                                                 <select class="form-control" id="level" name="level" required>
-                                                    <option value="0">MISE À JOUR</option>
-                                                    <option value="1">INFORMATION</option>
-                                                    <option value="2">ATTENTION</option>
-                                                    <option value="3">IMPORTANT</option>
+                                                    <option value="0">PLANIFIER</option>
+                                                    <option value="1">TERMINÉ</option>
+                                                    <option value="2">EN COURS</option>
+                                                    <option value="3">ÉCHEC</option>
                                                 </select>
                                             </div>
                                         </div>
@@ -93,29 +93,29 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            <?php foreach($changelogs as $changlog){ ?>
+                                            <?php foreach($Intervention as $changlog){ ?>
                                             <tr>
                                                 <td class="col-md-1" style="font-size:18px;">
 
                                                 <?php
-                                                $level = $changlog['Changelogs']['level'];
+                                                $level = $changlog['Intervention']['level'];
                                                 if($level == 1){
-                                                    echo '<span class="label label-info" style="padding:8px;">INFORMATION</span>';
+                                                    echo '<span class="label label-info" style="padding:8px;">TERMINÉ</span>';
                                                 }else if($level == 2){
-                                                    echo '<span class="label label-warning" style="padding:8px;">ATTENTION</span>';
+                                                    echo '<span class="label label-warning" style="padding:8px;">EN COURS</span>';
                                                 }else if($level == 3){
-                                                    echo '<span class="label label-danger" style="padding:8px;">IMPORTANT</span>';
+                                                    echo '<span class="label label-danger" style="padding:8px;">ÉCHEC</span>';
                                                 }else{
-                                                    echo '<span class="label label-success" style="padding:8px;">MISE À JOUR</span>';
+                                                    echo '<span class="label label-success" style="padding:8px;">PLANIFIER</span>';
                                                 }
                                                 ?>
 
                                                 </td>
-                                                <td class="col-md-2"><?= date("d-m-Y H:i:s", strtotime($changlog['Changelogs']['created'])); ?></td>
-                                                <td class="col-md-1"><?= $changlog['Changelogs']['author']; ?></td>
-                                                <td class="col-md-9"><?= $changlog['Changelogs']['description']; ?></td>
+                                                <td class="col-md-2"><?= date("d-m-Y H:i:s", strtotime($changlog['Intervention']['created'])); ?></td>
+                                                <td class="col-md-1"><?= $changlog['Intervention']['author']; ?></td>
+                                                <td class="col-md-9"><?= $changlog['Intervention']['description']; ?></td>
                                                 <td>
-                                                    <a href="<?= $this->Html->url(["controller" => null, "action" => "delete", $changlog['Changelogs']['id']]); ?>" class="btn btn-danger" role="button">
+                                                    <a href="<?= $this->Html->url(["controller" => null, "action" => "delete", $changlog['Intervention']['id']]); ?>" class="btn btn-danger" role="button">
                                                         <span class="fa fa-trash"></span>
                                                         <?= $Lang->get("CL_DELETE_LOG"); ?>
                                                     </a>
