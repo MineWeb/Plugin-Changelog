@@ -24,10 +24,10 @@
                                             <label class="control-label" id="level">
                                                 <?= $Lang->get("CL_LBL_LEVEL"); ?>
                                                 (
-                                                <span class="label label-success">MISE À JOUR</span>
-                                                <span class="label label-info">INFORMATION</span>
-                                                <span class="label label-warning">ATTENTION</span>
-                                                <span class="label label-danger">IMPORTANT</span>
+                                                <span class="label label-success"><i class="fa fa-retweet"></i> MISE À JOUR</span>
+                                                <span class="label label-info"><i class="fa fa-info-circle"></i> INFORMATION</span>
+                                                <span class="label label-warning"><i class=" fa fa-warning"></i> ATTENTION</span>
+                                                <span class="label label-danger"><i class="fa fa-warning"></i> IMPORTANT</span>
                                                 )
                                             </label>
                                             <div class="input-group">
@@ -100,13 +100,13 @@
                                                 <?php
                                                 $level = $changlog['Changelogs']['level'];
                                                 if($level == 1){
-                                                    echo '<span class="label label-info" style="padding:8px;">INFORMATION</span>';
+                                                    echo '<span class="label label-info" style="padding:8px;"><i class="fa fa-info-circle"></i> INFORMATION</span>';
                                                 }else if($level == 2){
-                                                    echo '<span class="label label-warning" style="padding:8px;">ATTENTION</span>';
+                                                    echo '<span class="label label-warning" style="padding:8px;"><i class=" fa fa-warning"></i> ATTENTION</span>';
                                                 }else if($level == 3){
-                                                    echo '<span class="label label-danger" style="padding:8px;">IMPORTANT</span>';
+                                                    echo '<span class="label label-danger" style="padding:8px;"><i class="fa fa-warning"></i> IMPORTANT</span>';
                                                 }else{
-                                                    echo '<span class="label label-success" style="padding:8px;">MISE À JOUR</span>';
+                                                    echo '<span class="label label-success" style="padding:8px;"><i class="fa fa-retweet"></i> MISE À JOUR</span>';
                                                 }
                                                 ?>
 
