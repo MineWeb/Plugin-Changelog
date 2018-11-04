@@ -1,7 +1,7 @@
-# Plugin MineWeb | Changelogs
+# Plugin MineWeb | Changelog
 
 ## Description
-Le plugin Changelogs ajoute un système d'information sur votre site, permettant à vos joueurs d'être informer des dernières actions/améliorations effectuées !. (VotreSite/changelog).
+Le plugin Changelog ajoute un système d'information sur votre site, permettant à vos joueurs d'être informés des dernières actions/améliorations effectuées !. (VotreSite/changelog).
 
 ## Installation | FTP
 1. Cliquez sur "Clone or download" sur la page "https://github.com/MineWeb/Plugin-Changelog".
