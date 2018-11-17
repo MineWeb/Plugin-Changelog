@@ -1,3 +1,26 @@
 {
-    
+   "CL_ADMIN_MAIN_TITLE": "ChangeLog",
+   "CL_MAIN_TITLE": "Changelogs",
+   "PLUGIN_DEVELOPED_BY" : "Plugin made by <a href=\"https://kenshimdev.fr/\" target=\"_blank\">https://kenshimdev.fr/</a>",
+   "CL_PRESENTATION_TITLE" : "This plugin will allow you to write logs visible by your users in the changelog, also called \"modification log\".",
+   "CL_CONFIGURATION_TITLE": "Add a log",
+   "CL_DELETE_TITLE": "Delete a log",
+   "CL_LBL_LEVEL": "Level of importance",
+   "CL_LBL_AUTHOR": "Author (Name)",
+   "CL_PLACEHOLDER_AUTHOR": "The author of this log....",
+   "CL_LBL_COMMENT": "Comment",
+   "CL_PLACEHOLDER_COMMENT": "Describe this log....",
+   "CL_TXT_SUBMIT": "Post",
+   "CL_LEVEL_ERROR": "The field \"Level of importance\" is required.",
+   "CL_AUTHOR_ERROR": "The field \"Author\" is required and must be between 2 and 50 characters long.",
+   "CL_COMMENT_ERROR": "The field \"Comment\" is required and must be at least 10 characters long.",
+   "CL_ADD_SUCCESS": "The changelog has been successfully published!",
+   "CL_ERROR_OCCURED": "An error has occurred. Please try again!",
+   "CL_DELETE_LOG": "Delete this record",
+   "CL_ADMIN_DELETE": "Log successfully deleted!",
+   "TABLE_HEAD_LEVEL": "Level",
+   "TABLE_HEAD_DATE": "Date",
+   "TABLE_HEAD_AUTHOR": "Author",
+   "TABLE_HEAD_COMMENT": "Comment",
+   "TABLE_HEAD_DELETE": "Delete"
 }
