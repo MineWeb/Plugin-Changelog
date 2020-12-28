@@ -1,32 +1,27 @@
 {
-   "name":"Changelog",
-   "admin_menus":{
-      "GLOBAL__ADMIN_PLUGINS":{
-         "Changelogs":{
-            "icon":"list",
-            "menu":{
-               "Gérer":{
-                  "icon":"cog",
-                  "route":"/admin/Changelog"
-               }
+    "name": "Changelog",
+    "author": "Kenshimdev",
+    "version": "1.1.2",
+    "admin_menus": {
+        "GLOBAL__ADMIN_PLUGINS": {
+            "Changelogs": {
+                "icon": "list",
+                "route": "/admin/Changelog"
             }
-         }
-      }
-   },
-   "navbar_routes":{
-      "Changelogs":"/changelog"
-   },
-   "author":"Kenshimdev",
-   "version":"1.1.1",
-   "useEvents":true,
-   "permissions":{
-      "available":[],
-      "default":{
-         "0":[],
-         "2":[]
-      }
-   },
-   "requirements":{
-      "CMS":"^1.2.0"
-   }
+        }
+    },
+    "navbar_routes": {
+        "Changelogs": "/changelog"
+    },
+    "useEvents": true,
+    "permissions": {
+        "available": [],
+        "default": {
+            "0": [],
+            "2": []
+        }
+    },
+    "requirements": {
+        "CMS": "^1.11.0"
+    }
 }
