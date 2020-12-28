@@ -1,13 +1,13 @@
 <section class="content">
     <div class="row">
         <div class="col-md-12">
-            <div class="box">
-                <div class="box-header with-border">
-                    <h3 class="box-title"><?= $Lang->get("CL_ADMIN_MAIN_TITLE"); ?></h3> <span style="float:right;"><?= $Lang->get("PLUGIN_DEVELOPED_BY"); ?></span>
+            <div class="card">
+                <div class="card-header with-border">
+                    <h3 class="card-title"><?= $Lang->get("CL_ADMIN_MAIN_TITLE"); ?></h3> <span style="float:right;"><?= $Lang->get("PLUGIN_DEVELOPED_BY"); ?></span>
                 </div>
-                <div class="box-body">
+                <div class="card-body">
                     <div class="row">
-                        <div class="col-md-5">
+                        <div class="col-md-12">
                             <p style="text-align:justify;font-style:italic;"><?= $Lang->get("CL_PRESENTATION_TITLE"); ?></p>
                         </div>
                     </div>
@@ -15,12 +15,12 @@
                     <h4 style="margin-top:30px;"><span class="fa fa-file-text"></span> <?= $Lang->get("CL_CONFIGURATION_TITLE"); ?></h4>
 
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <div class="container">
                                 <div class="row">
                                     <form method="post" action="<?= $this->Html->url(["controller" => "Changelog", "action" => "index", "admin" => true]); ?>" style="margin-left: -15px;">
 
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-12">
                                             <label class="control-label" id="level">
                                                 <?= $Lang->get("CL_LBL_LEVEL"); ?>
                                                 (
@@ -31,7 +31,9 @@
                                                 )
                                             </label>
                                             <div class="input-group">
-                                                <span class="input-group-addon"><span class="fa fa-exclamation-circle"></span></span>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><span class="fa fa-exclamation-circle"></span></span>
+                                                </div>
                                                 <select class="form-control" id="level" name="level" required>
                                                     <option value="0">MISE À JOUR</option>
                                                     <option value="1">INFORMATION</option>
@@ -41,10 +43,12 @@
                                             </div>
                                         </div>
 
-                                        <div class="form-group col-md-6">
+                                        <div class="form-group col-md-12">
                                             <label class="control-label" id="author"><?= $Lang->get("CL_LBL_AUTHOR"); ?></label>
                                             <div class="input-group">
-                                                <span class="input-group-addon"><span class="fa fa-user"></span></span>
+                                                <div class="input-group-prepend">
+                                                    <span class="input-group-text"><span class="fa fa-user"></span></span>
+                                                </div>
                                                 <input type="text" class="form-control" id="author" name="author" placeholder="<?= $Lang->get("CL_PLACEHOLDER_AUTHOR"); ?>" minlength="2" maxlength="50" required>
                                             </div>
                                         </div>
@@ -79,7 +83,7 @@
 
                     <h4 style="margin-top:30px;"><span class="fa fa-pencil"></span> <?= $Lang->get("CL_DELETE_TITLE"); ?></h4>
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-8">
                             <div class="container">
                                 <div class="row">
                                     <table class="table table-striped">
@@ -95,7 +99,7 @@
                                         <tbody>
                                             <?php foreach($changelogs as $changlog){ ?>
                                             <tr>
-                                                <td class="col-md-1" style="font-size:18px;">
+                                                <td style="font-size:18px;">
 
                                                 <?php
                                                 $level = $changlog['Changelogs']['level'];
@@ -111,9 +115,9 @@
                                                 ?>
 
                                                 </td>
-                                                <td class="col-md-2"><?= date("d-m-Y H:i:s", strtotime($changlog['Changelogs']['created'])); ?></td>
-                                                <td class="col-md-1"><?= $changlog['Changelogs']['author']; ?></td>
-                                                <td class="col-md-9"><?= $changlog['Changelogs']['description']; ?></td>
+                                                <td><?= date("d-m-Y H:i:s", strtotime($changlog['Changelogs']['created'])); ?></td>
+                                                <td><?= $changlog['Changelogs']['author']; ?></td>
+                                                <td><?= $changlog['Changelogs']['description']; ?></td>
                                                 <td>
                                                     <a href="<?= $this->Html->url(["controller" => null, "action" => "delete", $changlog['Changelogs']['id']]); ?>" class="btn btn-danger" role="button">
                                                         <span class="fa fa-trash"></span>
@@ -133,5 +137,5 @@
             </div>
         </div>
     </div>
-<div class="clearfix"></div>
+    <div class="clearfix"></div>
 </section>
